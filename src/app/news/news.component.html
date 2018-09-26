@@ -1,0 +1,23 @@
+<h4> TOI top news </h4>
+<div class="section blue-text text-darken-3">
+  <div class="news">
+    <div class="row">
+      <ul class="collection">
+        <li class="collection-item avatar" *ngFor="let article of articles">
+          <!--<img [src]="(article.urlToImage)" alt="" class="circle">-->
+          <img class="news_images" src="{{article.urlToImage}}" alt="">
+          <span class="title">
+            <b>
+              <a [href]="article.url" target="_blank">
+                {{article.title}}
+              </a>
+            </b>
+          </span>
+          <span class="inside-news">
+            <br>{{article.description}}
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<span><h4 class="title"> Type in twitter id to get feed </h4></span>
+    <ul class="twitter">
+       <input id="twitter_input" (keyup)="getTweets($event)" type="text" size="20" placeholder="Search" pInputText />
+        <li *ngFor="let twitter_response of twitter_responses[0]">
+          <span class="title">
+            <b>
+              <a [href]="twitter_response.url" target="_blank">
+                {{twitter_response.title}}
+              </a>
+            </b>
+          </span>
+          <span class="twitter-news">
+            <br>{{twitter_response.contentSnippet}}
+          </span>
+        </li>
+    </ul>
+
+
+
+    

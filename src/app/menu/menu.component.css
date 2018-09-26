@@ -1,0 +1,19 @@
+.ui-menuitem-link{
+    padding: 20px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.42857;
+    font-family: OpenSans-Bold;
+}
+
+.ui-menuitem  .active {
+    background-color: #2399e5;
+    color: #ffffff;
+}
+.ui-menu{
+    width: 17.5em;
+    margin-top: 0px;
+}
+
+

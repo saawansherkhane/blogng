@@ -1,0 +1,65 @@
+<div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+        <div class="ui-grid-col-2">
+           <div class="ui-menu ui-widget ui-widget-content ui-corner-all ui-helper-clearfix pull-left">
+            <ul class="ui-menu-list ui-helper-reset">
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all" href="#">
+                   <span class="ui-menuitem-text">Projects</span>
+                </a>
+              </li>
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all active" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                  <span class="ui-menuitem-text">Articles in Progress</span>
+                </a>
+              </li>
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                   <span class="ui-menuitem-text">Published Articles</span>
+                </a>
+              </li>
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                  <span class="ui-menuitem-text">Timeline View</span>
+                </a>
+              </li>
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                  <span class="ui-menuitem-text">Deleted</span>
+                </a>
+              </li>
+              <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                 <span class="ui-menuitem-text">Archives</span>
+                </a>
+              </li>
+             <li class="ui-menuitem ui-widget ui-corner-all">
+                <a class="ui-menuitem-link ui-corner-all" ng-reflect-klass="ui-menuitem-link ui-corner-all"  href="#">
+                  <span class="ui-menuitem-text">Notification</span>
+                </a>
+             </li>
+            </ul>
+          </div>
+        </div> <!-- End of col 2  -->
+        
+        <div class="ui-grid-col-8">
+          <app-articles></app-articles>
+        </div>
+        <div class="ui-grid-col-2">
+            <div class="ui-g-12">
+               <app-geolocations></app-geolocations>
+            </div>
+            <div class="ui-g-12">
+               <app-news></app-news>
+            </div>
+            <div class="ui-g-12">
+               <app-asteroid></app-asteroid>
+            </div>
+            <div class="ui-g-12">
+               <app-twitter></app-twitter>
+            </div>
+        </div>
+        
+     </div>
+</div>
+

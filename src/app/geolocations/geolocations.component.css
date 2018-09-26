@@ -1,0 +1,9 @@
+h4 {
+  color: green;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.sebm-google-map-container {
+  height: 240px;
+  width: 100%;
+}

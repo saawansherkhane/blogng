@@ -1,0 +1,51 @@
+p.important {
+    color: green;
+}
+p.importants {
+    color: red;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.search {
+  float: right;
+}
+
+.head{
+    color: SlateGrey;
+}
+
+
+.first{
+    color: SlateGrey;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.42857;
+    font-family: OpenSans-Bold; 
+}
+
+.second{
+    color: SlateGrey;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.42857;
+    font-family: OpenSans-Bold; 
+}
+
+.third{
+    color: SlateGrey;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.42857;
+    font-family: OpenSans-Bold; 
+    }
+
+.optionstyle {
+  display: block;
+  float: right;
+}

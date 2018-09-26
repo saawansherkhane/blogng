@@ -1,0 +1,67 @@
+   <div class="ui-g-12">
+     <!-- Dialog -->
+        <p-dialog header="Create Article" [(visible)]="display" modal="modal" width="650" responsive="true">
+            <div class="pull-right">
+                <button pButton type="button" class="ui-button-primary" label="Save draft"></button>
+                <button pButton type="button" class="ui-button-success" label="Review"></button>
+                <button pButton type="button" class="ui-button-info" label="Publish"></button>
+            </div>
+              
+            <div class="form-group">
+              <h5 class="first"> Title </h5>
+              <input type="text" size="35" class="form-control" id="title" [(ngModel)]="title" placeholder="title">
+            </div>
+            <div class="form-group">
+              <h5 class="second"> Body </h5>
+              <p-editor [(ngModel)]="body" [style]="{'height':'200px'}"></p-editor>
+            </div>
+            <div class="form-group">
+              <h5 class="third"> Published Date </h5>
+              <input type="text" size="35" class="form-control" id="published_date" [(ngModel)]="published_date" placeholder="yyyy-mm-dd" >
+            </div>
+
+                <p-footer>
+                    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+                      <p-growl [value]="msgs" sticky="sticky"></p-growl>
+                      <button type="submit" pButton (click)="addArticle(title,  body, published_date); showSuccess()" label="Submit" class="ui-button-success"></button>
+                    </div>
+                </p-footer>
+        </p-dialog>
+        
+        <button type="text" (click)="showDialog()" pButton icon="fa-external-link-square" label="Add new article"></button>
+     <!-- End Dialog -->
+
+     <!--<input id="search_input" (keyup)="searcharticles($event)" type="text" size="20" placeholder="Search ..." pInputText />-->
+     <div class="optionstyle">
+       <p-radioButton name="group2" value="Option 1" label="All" [(ngModel)]="val2"></p-radioButton>
+       <p-radioButton name="group2" value="Option 2" label="Allocated to me"></p-radioButton>
+       <p-radioButton name="group2" value="Option 3" label="Started by me"></p-radioButton>
+     </div>
+
+     <div align="center">
+      <input id="search_input" class="search" (keyup)="searcharticles($event)" type="text" size="20" placeholder="Search ..." pInputText style="width:50%"/>
+      <h3 class= "head" style="width:50%"> {{count}} Articles {{overdue}} Overdue </h3>
+     </div>
+
+      <div class="ui-g-4" *ngFor="let article of articles">
+        <p-panel header="{{article.title}}" [style]="{'text-align':'center'}">
+          <div [innerHTML]="article.body">
+           </div> 
+            <h5 *ngIf="article.due">
+              <p class="important">Due in {{article.due}} days <i class="fa fa-clock-o" aria-hidden="true"></i>
+            </h5>
+            <h5 *ngIf="article.overdue">
+              <p class="importants">Overdue by {{article.overdue}} days <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+            </h5>
+         </p-panel>
+       </div>
+    </div>
+
+
+
+
+
+         
+
+
+

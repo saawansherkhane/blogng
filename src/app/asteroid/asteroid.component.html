@@ -1,0 +1,31 @@
+<span><h4 class="title"> Asteroids Closes to Earth</h4></span>
+    <ul class="news">
+        <li *ngFor="let asteroid_response of asteroid_responses[0]">
+            <span>
+                <b>
+                <a href="{{asteroid_response.nasa_jpl_url}}">
+                    <span>
+                    {{asteroid_response.title}}<br>Date:{{asteroid_response.publishedDate}}
+                    </span>
+                </a>
+                </b>
+            </span>
+            <br>{{asteroid_response.contentSnippet}}
+        </li>
+    </ul>
+
+<span><h4 class="title"> Latest Earth</h4></span>
+    <ul class="news">
+        <li *ngFor="let earthquake_response of earthquake_responses[0]">
+            <span>
+                <b>
+                <a href="{{earthquake_response.nasa_jpl_url}}">
+                <span>
+                    {{earthquake_response.title}}<br>Date:{{earthquake_response.publishedDate}}
+                </span>
+                </a>
+                </b>
+            </span>
+            <br>{{earthquake_response.contentSnippet}}
+        </li>
+    </ul>
